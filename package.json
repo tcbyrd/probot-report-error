@@ -1,0 +1,26 @@
+{
+  "name": "probot-report-error",
+  "version": "0.0.1",
+  "description": "A Probot extension that reports errors to the user",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tcbyrd/probot-report-error.git"
+  },
+  "keywords": [
+    "probot",
+    "probot-extension"
+  ],
+  "author": "tcbyrd@github.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tcbyrd/probot-report-error/issues"
+  },
+  "homepage": "https://github.com/tcbyrd/probot-report-error#readme",
+  "dependencies": {
+    "probot": "^6.1.0"
+  }
+}
