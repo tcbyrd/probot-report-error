@@ -50,6 +50,6 @@ async function forRepository (context) {
               For more information or questions, see [probot/stale](https://github.com/probot/stale/)",
       title: "Error parsing `.github/stale.yml`"
     })
-....
+...
 }
 ```
