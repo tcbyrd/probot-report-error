@@ -21,6 +21,10 @@
   },
   "homepage": "https://github.com/tcbyrd/probot-report-error#readme",
   "dependencies": {
+    "jest": "^22.4.3",
     "probot": "^6.1.0"
+  },
+  "peerDependencies": {
+    "probot-config": "^0.1.0"
   }
 }
