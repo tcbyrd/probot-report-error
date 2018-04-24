@@ -38,15 +38,18 @@ As an example, here's how to use this with [probot-config](https://github.com/ge
 const getConfig = require('probot-config')
 const reportErr = require('probot-report-error')
 
-// Catch the error message in a try/catch block
-// In this example, an error will be reported if `getConfig` fails to parse `stale.yml`
-try {
-  let config = await getConfig(context, 'stale.yml')
-} catch (err) {
-  reportErr(context, err, {
-    before: "An error occurred while trying to check this repository for stale issues.",
-    after: "Check the syntax of `.github/stale.yml` and make sure it's valid.\
-            For more information or questions, see [probot/stale](https://github.com/probot/stale/)",
-    title: "Error parsing `.github/stale.yml`"
-  })
+async function forRepository (context) {
+  // Catch the error message in a try/catch block
+  // In this example, an error will be reported if `getConfig` fails to parse `stale.yml`
+  try {
+    let config = await getConfig(context, 'stale.yml')
+  } catch (err) {
+    reportErr(context, err, {
+      before: "An error occurred while trying to check this repository for stale issues.",
+      after: "Check the syntax of `.github/stale.yml` and make sure it's valid.\
+              For more information or questions, see [probot/stale](https://github.com/probot/stale/)",
+      title: "Error parsing `.github/stale.yml`"
+    })
+....
+}
 ```
