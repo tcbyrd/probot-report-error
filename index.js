@@ -24,7 +24,7 @@ const issueTitleQuery = `
   }
 `
 module.exports = async function reportErr (context, err, config) {
-  // Determine if there's already an open issue with this error in the last n hours
+  // Determine if there's already an open issue with the same Issue title
   const issues = (await context.github.query(issueTitleQuery, {
     url: context.payload.repository.html_url
   })).resource.issues.nodes
